@@ -1,0 +1,18 @@
+# LightLevelBlocker Configuration file!
+# @author syamn <admin@sakura-server.net>
+# github: https://github.com/syamn/
+
+#================#
+#  Basic Config  #
+#================#
+Message: "&cToo dark to destroy this block!"
+BlockLevel: 0
+BypassWorlds:
+- this_is_a
+- bypass_world
+
+#==================#
+#   DO NOT TOUCH   #
+#==================#
+# Do not touch this option! It is a check if you are running the recent configuration version
+version: 1.0

@@ -1,0 +1,12 @@
+##  Plugin Information  ##
+name: LightLevelBlocker
+version: 1.0
+main: syam.LightLevelBlocker.LightLevelBlocker
+description: LightLevelBlocker Plugin
+website: http://sakura-server.net/
+##  Original Author     ##
+author: syam
+permissions:
+    llb.bypass:
+        default: op
+        description: Allow bypass this plugin
