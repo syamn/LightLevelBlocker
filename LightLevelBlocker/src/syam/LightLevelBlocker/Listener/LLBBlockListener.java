@@ -3,6 +3,7 @@ package syam.LightLevelBlocker.Listener;
 import java.util.logging.Logger;
 
 import org.bukkit.GameMode;
+import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
 import org.bukkit.entity.Player;
@@ -35,6 +36,19 @@ public class LLBBlockListener implements Listener{
 		// 権限持ち、またはクリエイティブなら何もしない
 		if (player.hasPermission("llb.bypass") || player.getGameMode().equals(GameMode.CREATIVE)){
 			return;
+		}
+
+		// 石、鉱石のみかチェック
+		if (plugin.getConfigs().onlyStones){
+			Material mat = block.getType();
+			if (mat != Material.STONE &&
+					mat != Material.DIAMOND_ORE &&
+					mat != Material.GOLD_ORE &&
+					mat != Material.IRON_ORE &&
+					mat != Material.COAL_ORE &&
+					mat != Material.EMERALD_ORE){
+				return;
+			}
 		}
 
 		boolean denied = false;

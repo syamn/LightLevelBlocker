@@ -31,6 +31,7 @@ public class ConfigurationManager {
 
 	public byte blockLevel = 0;
 	public String msg = defaultMsg;
+	public boolean onlyStones = true;
 
 	public List<String> bypassWorlds = new ArrayList<String>();
 	// 設定ここまで
@@ -81,6 +82,8 @@ public class ConfigurationManager {
 			log.warning(logPrefix+ "BlockLevel could not cast to byte object!");
 			blockLevel = 0;
 		}
+
+		onlyStones = plugin.getConfig().getBoolean("OnlyStones");
 
 		bypassWorlds = plugin.getConfig().getStringList("BypassWorlds");
 	}
