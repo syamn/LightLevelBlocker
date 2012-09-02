@@ -1,6 +1,6 @@
 ##  Plugin Information  ##
 name: LightLevelBlocker
-version: 1.0
+version: 1.1
 main: syam.LightLevelBlocker.LightLevelBlocker
 description: LightLevelBlocker Plugin
 website: http://sakura-server.net/
